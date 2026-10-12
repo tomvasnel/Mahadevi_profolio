@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b3a">
+  <meta name="description" content="Professional portfolio of Mahadevi S, CPC-certified medical coding professional specializing in radiology coding, quality audits, and root cause analysis.">
+  <title>Mahadevi S, CPC | Medical Coding Professional</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #172c2c;
+      --muted: #657777;
+      --teal: #176b63;
+      --teal-dark: #103f3d;
+      --mint: #dff4eb;
+      --cream: #f7f8f4;
+      --line: #e4ebe6;
+      --white: #fff;
+      --shadow: 0 18px 55px rgba(22, 55, 49, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; color: var(--ink); background: var(--cream);
+      font-family: "DM Sans", sans-serif; line-height: 1.7;
+    }
+    h1,h2,h3,h4,h5,.brand { font-family: "Manrope", sans-serif; letter-spacing: -.035em; }
+    a { text-decoration: none; }
+    .navbar {
+      background: rgba(255,255,255,.94); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(228,235,230,.9);
+      transition: box-shadow .25s ease;
+    }
+    .navbar.scrolled { box-shadow: 0 8px 28px rgba(20,50,45,.08); }
+    .brand-mark {
+      display:inline-grid; place-items:center; width:40px; height:40px; border-radius:13px;
+      background:var(--teal-dark); color:#fff; font-weight:800; font-size:.95rem;
+    }
+    .brand { font-weight:800; color:var(--ink); font-size:1.03rem; }
+    .brand small { display:block; font:600 .67rem "DM Sans",sans-serif; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; }
+    .navbar .nav-link { color:#526564; font-weight:600; font-size:.91rem; padding:.7rem .85rem !important; }
+    .navbar .nav-link:hover,.navbar .nav-link.active { color:var(--teal); }
+    .btn-teal { background:var(--teal); color:#fff; border:1px solid var(--teal); padding:.78rem 1.15rem; border-radius:12px; font-weight:700; }
+    .btn-teal:hover { background:var(--teal-dark); border-color:var(--teal-dark); color:#fff; transform:translateY(-1px); }
+    .btn-outline-teal { border:1px solid #b9d5cd; color:var(--teal-dark); padding:.78rem 1.15rem; border-radius:12px; font-weight:700; background:#fff; }
+    .btn-outline-teal:hover { background:var(--mint); color:var(--teal-dark); border-color:var(--mint); }
+    .hero { padding: 145px 0 82px; overflow:hidden; position:relative; }
+    .hero:before {
+      content:""; position:absolute; width:520px; height:520px; right:-180px; top:30px;
+      border-radius:50%; background:radial-gradient(circle, #d9eee4 0, rgba(217,238,228,0) 68%); pointer-events:none;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:.55rem; border:1px solid #c9e4d9;
+      background:#eef8f2; color:var(--teal-dark); padding:.42rem .78rem; border-radius:100px;
+      font-size:.78rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    }
+    .eyebrow .dot { width:7px; height:7px; border-radius:50%; background:#2d9b79; }
+    .hero h1 { font-size:clamp(2.8rem, 6vw, 5.3rem); line-height:1.04; font-weight:800; margin:1.3rem 0 1.2rem; max-width:760px; }
+    .hero h1 .accent { color:var(--teal); }
+    .hero-copy { color:var(--muted); font-size:1.08rem; max-width:640px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.8rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:2rem; color:var(--muted); font-size:.88rem; }
+    .hero-meta span { display:flex; gap:.5rem; align-items:center; }
+    .hero-meta i { color:var(--teal); font-size:1rem; }
+    .profile-panel {
+      position:relative; z-index:1; max-width:390px; margin:0 auto; padding:28px;
+      border:1px solid rgba(220,234,226,.9); border-radius:28px; background:rgba(255,255,255,.88);
+      box-shadow:var(--shadow);
+    }
+    .profile-visual {
+      min-height:245px; display:grid; place-items:center; border-radius:22px; overflow:hidden;
+      background:linear-gradient(140deg,#164d48,#267a6d); position:relative;
+    }
+    .profile-visual:before,.profile-visual:after { content:""; position:absolute; border:1px solid rgba(255,255,255,.17); border-radius:50%; }
+    .profile-visual:before { width:230px; height:230px; }
+    .profile-visual:after { width:300px; height:300px; }
+    .monogram {
+      position:relative; z-index:1; width:126px; height:126px; display:grid; place-items:center;
+      border-radius:38px; transform:rotate(-5deg); color:#174b44; background:#e2f6eb;
+      font:800 2.7rem "Manrope",sans-serif; box-shadow:0 18px 45px rgba(0,0,0,.16);
+    }
+    .profile-caption { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding-top:22px; }
+    .profile-caption h3 { font-size:1.1rem; font-weight:800; margin:0; }
+    .profile-caption p { color:var(--muted); margin:.25rem 0 0; font-size:.86rem; }
+    .cpc-pill { border:1px solid #c9e4d9; background:#eef8f2; color:var(--teal); font-weight:800; border-radius:10px; padding:.4rem .65rem; font-size:.8rem; white-space:nowrap; }
+    .stats-wrap { padding:0 0 54px; }
+    .stats { background:#fff; border:1px solid var(--line); border-radius:20px; padding:22px 10px; box-shadow:0 10px 35px rgba(22,55,49,.035); }
+    .stat { padding:8px 22px; height:100%; }
+    .stat + .stat { border-left:1px solid var(--line); }
+    .stat strong { display:block; font:800 1.8rem "Manrope",sans-serif; color:var(--teal-dark); line-height:1.2; }
+    .stat span { color:var(--muted); font-size:.84rem; }
+    section.content-section { padding:82px 0; }
+    .section-kicker { color:var(--teal); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.13em; margin-bottom:.8rem; }
+    .section-title { font-size:clamp(2rem,4vw,3.05rem); line-height:1.15; font-weight:800; margin-bottom:1rem; }
+    .section-lead { max-width:700px; color:var(--muted); font-size:1.02rem; }
+    .section-heading { margin-bottom:2.5rem; }
+    .surface-card { background:#fff; border:1px solid var(--line); border-radius:22px; box-shadow:0 10px 35px rgba(22,55,49,.035); }
+    .about-card { padding:32px; height:100%; }
+    .icon-tile { display:grid; place-items:center; width:48px; height:48px; flex:0 0 48px; border-radius:15px; background:var(--mint); color:var(--teal); font-size:1.3rem; }
+    .about-card h3 { font-size:1.2rem; font-weight:800; margin:1rem 0 .65rem; }
+    .about-card p { color:var(--muted); margin:0; }
+    .skill-item { padding:19px 0; border-bottom:1px solid var(--line); }
+    .skill-item:last-child { border-bottom:0; padding-bottom:0; }
+    .skill-head { display:flex; justify-content:space-between; gap:1rem; font-weight:700; margin-bottom:.7rem; }
+    .skill-head span:last-child { color:var(--teal); font-size:.82rem; }
+    .skill-bar { height:7px; border-radius:50px; background:#edf2ef; overflow:hidden; }
+    .skill-bar span { display:block; height:100%; border-radius:50px; background:linear-gradient(90deg,#176b63,#56b89a); width:0; transition:width 1.1s ease; }
+    .skill-bar span.animated { width:var(--level); }
+    .soft-section { background:#f0f5f1; }
+    .timeline { position:relative; padding-left:30px; }
+    .timeline:before { content:""; position:absolute; top:8px; bottom:10px; left:8px; width:2px; background:#cce1d7; }
+    .timeline-item { position:relative; margin-bottom:26px; }
+    .timeline-item:last-child { margin-bottom:0; }
+    .timeline-item:before { content:""; position:absolute; top:7px; left:-28px; width:12px; height:12px; border-radius:50%; background:var(--teal); border:3px solid #d8eee3; box-shadow:0 0 0 3px #fff; }
+    .experience-card { padding:32px; }
+    .experience-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; margin-bottom:1.3rem; }
+    .experience-top h3 { font-size:1.4rem; font-weight:800; margin-bottom:.3rem; }
+    .experience-top p { color:var(--muted); margin:0; }
+    .date-chip { align-self:flex-start; border-radius:100px; background:#eef8f2; color:var(--teal-dark); padding:.45rem .8rem; font-weight:700; font-size:.82rem; }
+    .responsibility-list { list-style:none; padding:0; margin:0; }
+    .responsibility-list li { display:flex; gap:.8rem; margin:.8rem 0; color:#506563; }
+    .responsibility-list i { color:var(--teal); margin-top:.22rem; }
+    .education-card { padding:24px; height:100%; }
+    .education-card .year { color:var(--teal); font-weight:800; font-size:.8rem; letter-spacing:.04em; }
+    .education-card h3 { font-size:1.08rem; font-weight:800; margin:.6rem 0 .3rem; }
+    .education-card p { color:var(--muted); margin:0; font-size:.9rem; }
+    .grade { display:inline-flex; margin-top:1rem; border-radius:10px; padding:.35rem .6rem; background:#f0f5f1; color:var(--teal-dark); font-size:.82rem; font-weight:800; }
+    .expertise-card { padding:25px; height:100%; transition:transform .25s, box-shadow .25s; }
+    .expertise-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); }
+    .expertise-card h3 { font-size:1.03rem; font-weight:800; margin:1rem 0 .5rem; }
+    .expertise-card p { color:var(--muted); font-size:.91rem; margin:0; }
+    .tag { display:inline-block; margin:.25rem .2rem .1rem 0; padding:.4rem .65rem; border:1px solid #dce9e2; border-radius:8px; color:#47615c; background:#fff; font-size:.8rem; font-weight:600; }
+    .contact-panel { background:var(--teal-dark); border-radius:28px; padding:clamp(28px,5vw,55px); color:#fff; overflow:hidden; position:relative; }
+    .contact-panel:after { content:""; position:absolute; width:360px; height:360px; border-radius:50%; border:1px solid rgba(255,255,255,.12); right:-100px; top:-150px; box-shadow:0 0 0 35px rgba(255,255,255,.025),0 0 0 75px rgba(255,255,255,.02); }
+    .contact-panel .section-kicker { color:#a9e3cc; }
+    .contact-panel .section-lead { color:#d1e4dd; }
+    .contact-link { display:flex; gap:14px; align-items:center; color:#fff; padding:15px 0; border-bottom:1px solid rgba(255,255,255,.14); overflow-wrap:anywhere; }
+    .contact-link:last-child { border-bottom:0; }
+    .contact-link i { font-size:1.15rem; color:#a9e3cc; width:22px; }
+    .contact-link small { display:block; color:#a8c7bd; font-size:.75rem; }
+    .contact-link:hover { color:#b8f0d9; }
+    footer { padding:25px 0; color:var(--muted); font-size:.84rem; }
+    .back-top { position:fixed; right:20px; bottom:20px; width:45px; height:45px; border:0; border-radius:14px; background:var(--teal); color:#fff; box-shadow:0 8px 25px rgba(23,107,99,.25); display:none; z-index:1000; }
+    .reveal { opacity:0; transform:translateY(18px); transition:opacity .65s ease,transform .65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @media (max-width: 991.98px) {
+      .hero { padding-top:120px; }
+      .hero-visual-col { margin-top:42px; }
+      .stat { padding:10px 16px; }
+    }
+    @media (max-width: 767.98px) {
+      .hero { padding:112px 0 55px; }
+      section.content-section { padding:62px 0; }
+      .hero h1 { font-size:clamp(2.6rem,12vw,4rem); }
+      .stats-wrap { padding-bottom:35px; }
+      .stat { text-align:left; padding:14px 18px; }
+      .stat + .stat { border-left:0; }
+      .stat strong { font-size:1.5rem; }
+      .about-card,.experience-card { padding:24px; }
+      .profile-panel { padding:20px; }
+      .profile-visual { min-height:210px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; }
+      .reveal { opacity:1; transform:none; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="Mahadevi portfolio home">
+        <span class="brand-mark">MS</span>
+        <span class="brand">Mahadevi S<small>CPC · Medical Coding</small></span>
+      </a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center py-3 py-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a class="btn btn-teal btn-sm px-3 py-2" href="#contact">Contact me <i class="bi bi-arrow-up-right ms-1"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container position-relative">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <span class="eyebrow"><span class="dot"></span> CPC Certified Professional</span>
+            <h1>Accuracy in every code. <span class="accent">Quality in every detail.</span></h1>
+            <p class="hero-copy">I’m Mahadevi S, a medical coding professional specializing in radiology coding, quality audits, client updates, and root cause analysis. I’m passionate about accurate coding, continuous learning, and helping teams deliver dependable results.</p>
+            <div class="hero-actions">
+              <a class="btn btn-teal" href="#experience">Explore my experience <i class="bi bi-arrow-down-right ms-1"></i></a>
+              <a class="btn btn-outline-teal" href="#contact"><i class="bi bi-envelope me-2"></i>Get in touch</a>
+            </div>
+            <div class="hero-meta">
+              <span><i class="bi bi-patch-check-fill"></i> CPC Certified</span>
+              <span><i class="bi bi-heart-pulse-fill"></i> Radiology Coding</span>
+              <span><i class="bi bi-clipboard2-check-fill"></i> Quality & Auditing</span>
+            </div>
+          </div>
+          <div class="col-lg-5 hero-visual-col">
+            <div class="profile-panel">
+              <div class="profile-visual" aria-label="Decorative initials MS">
+                <div class="monogram">MS</div>
+              </div>
+              <div class="profile-caption">
+                <div><h3>Mahadevi S</h3><p>Senior Medical Coding · Radiology</p></div>
+                <span class="cpc-pill">CPC</span>
+              </div>
+              <div class="d-flex gap-2 mt-3">
+                <span class="tag"><i class="bi bi-check-circle me-1"></i> Coding accuracy</span>
+                <span class="tag"><i class="bi bi-people me-1"></i> Team support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-wrap">
+      <div class="container">
+        <div class="stats row g-0 text-center reveal">
+          <div class="col-6 col-md-3"><div class="stat"><strong>3+ years</strong><span>Professional experience</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><strong>CPC</strong><span>Certified Professional Coder</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><strong>Radiology</strong><span>Core coding specialty</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat"><strong>Quality</strong><span>Audits & root cause analysis</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="content-section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">A little about me</p>
+          <h2 class="section-title">A detail-oriented professional<br class="d-none d-md-block"> with a quality-first mindset.</h2>
+          <p class="section-lead">My goal is to contribute to a growth-oriented organization by applying my coding knowledge, supporting team performance, maintaining quality standards, and continually developing my professional skills.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <article class="surface-card about-card">
+              <div class="icon-tile"><i class="bi bi-clipboard2-pulse"></i></div>
+              <h3>Medical coding expertise</h3>
+              <p>Knowledge of medical terminology, anatomy, physiology, pathology, diagnostics, and radiology procedure coding.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="surface-card about-card">
+              <div class="icon-tile"><i class="bi bi-shield-check"></i></div>
+              <h3>Quality & compliance</h3>
+              <p>Experience reviewing coding errors, supporting internal audits, applying client updates, and identifying preventive measures.</p>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="surface-card about-card">
+              <div class="icon-tile"><i class="bi bi-people"></i></div>
+              <h3>Team collaboration</h3>
+              <p>Comfortable coordinating workflows, supporting trainee coders, sharing knowledge, and helping teams stay aligned.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section soft-section" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Career journey</p>
+          <h2 class="section-title">Professional experience</h2>
+          <p class="section-lead">Hands-on experience in radiology coding, operational coordination, quality improvement, and coder support.</p>
+        </div>
+        <div class="surface-card experience-card reveal">
+          <div class="experience-top">
+            <div>
+              <h3>Synthesis Healthcare (SHAI)</h3>
+              <p>Senior Medical Coding Professional · Radiology</p>
+            </div>
+            <span class="date-chip"><i class="bi bi-calendar3 me-1"></i> Feb 2023 – Sep 2026</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <strong>Radiology coding across modalities</strong>
+              <ul class="responsibility-list mt-2">
+                <li><i class="bi bi-check2-circle"></i><span>Worked on X-ray, MRI, CT, ultrasound, duplex studies, OB and non-OB ultrasound, and global coding involving contrast procedures.</span></li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <strong>Workflow & deployment coordination</strong>
+              <ul class="responsibility-list mt-2">
+                <li><i class="bi bi-check2-circle"></i><span>Handled employee deployment-related activities and workflow coordination based on operational requirements and inventory.</span></li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <strong>Client updates & coding compliance</strong>
+              <ul class="responsibility-list mt-2">
+                <li><i class="bi bi-check2-circle"></i><span>Reviewed and implemented client updates, communicated changes to team members, and helped maintain alignment with updated guidelines.</span></li>
+              </ul>
+            </div>
+            <div class="timeline-item">
+              <strong>Internal audits, RCA & knowledge sharing</strong>
+              <ul class="responsibility-list mt-2">
+                <li><i class="bi bi-check2-circle"></i><span>Performed root cause analysis to identify coding errors, explain findings, and recommend corrective and preventive actions.</span></li>
+                <li><i class="bi bi-check2-circle"></i><span>Conducted internal audits for trainee coders and ramp-up users to support accuracy, quality standards, and client requirements.</span></li>
+                <li><i class="bi bi-check2-circle"></i><span>Participated in EBT sessions to strengthen coding knowledge, process awareness, and team learning.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">What I bring</p>
+          <h2 class="section-title">Skills & areas of expertise</h2>
+          <p class="section-lead">A blend of coding knowledge, analytical thinking, operational coordination, and communication.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-6 reveal">
+            <div class="surface-card p-4 p-md-5 h-100">
+              <h3 class="h5 fw-bold mb-3">Core capabilities</h3>
+              <div class="skill-item"><div class="skill-head"><span>Radiology procedure coding</span><span>Core skill</span></div><div class="skill-bar"><span style="--level:92%"></span></div></div>
+              <div class="skill-item"><div class="skill-head"><span>Medical terminology</span><span>Core skill</span></div><div class="skill-bar"><span style="--level:88%"></span></div></div>
+              <div class="skill-item"><div class="skill-head"><span>Internal auditing & quality review</span><span>Core skill</span></div><div class="skill-bar"><span style="--level:86%"></span></div></div>
+              <div class="skill-item"><div class="skill-head"><span>Root cause analysis</span><span>Core skill</span></div><div class="skill-bar"><span style="--level:85%"></span></div></div>
+              <p class="text-secondary small mt-3 mb-0">Visual indicators are illustrative and are not formal assessment scores.</p>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <div class="surface-card p-4 p-md-5 h-100">
+              <h3 class="h5 fw-bold mb-3">Knowledge & tools</h3>
+              <div class="mb-4">
+                <p class="small fw-bold text-secondary mb-2">CODING & CLINICAL KNOWLEDGE</p>
+                <span class="tag">CPC Certified</span><span class="tag">ICD-CM guidelines</span><span class="tag">CPT coding</span><span class="tag">Radiology coding</span><span class="tag">Anatomy & physiology</span><span class="tag">Diagnostics & pathology</span>
+              </div>
+              <div class="mb-4">
+                <p class="small fw-bold text-secondary mb-2">OPERATIONS & QUALITY</p>
+                <span class="tag">Internal auditing</span><span class="tag">Client updates</span><span class="tag">Workflow coordination</span><span class="tag">Coder support</span><span class="tag">EBT sessions</span><span class="tag">Corrective actions</span>
+              </div>
+              <div>
+                <p class="small fw-bold text-secondary mb-2">COMPUTER PROFICIENCY</p>
+                <span class="tag">Microsoft Word</span><span class="tag">Microsoft Excel</span><span class="tag">PowerPoint</span><span class="tag">Outlook</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section soft-section" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Academic background</p>
+          <h2 class="section-title">Education & qualifications</h2>
+          <p class="section-lead">A foundation in nursing education that supports my understanding of medical terminology and clinical concepts.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <article class="surface-card education-card">
+              <span class="year">2018 – 2021</span>
+              <h3>B.Sc. Nursing</h3>
+              <p>Padmasree College of Nursing</p>
+              <span class="grade">74.0%</span>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="surface-card education-card">
+              <span class="year">2017 – 2018</span>
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <p>Government Girls Higher Secondary School</p>
+              <span class="grade">70.0%</span>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="surface-card education-card">
+              <span class="year">2017</span>
+              <h3>Secondary School Leaving Certificate (SSLC)</h3>
+              <p>Government Girls Higher Secondary School</p>
+              <span class="grade">84.0%</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" id="strengths">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">How I work</p>
+          <h2 class="section-title">Professional strengths</h2>
+        </div>
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3 reveal"><div class="surface-card expertise-card"><div class="icon-tile"><i class="bi bi-lightning-charge"></i></div><h3>Adaptable & hardworking</h3><p>Flexible in changing workflows and committed to completing responsibilities carefully.</p></div></div>
+          <div class="col-sm-6 col-lg-3 reveal"><div class="surface-card expertise-card"><div class="icon-tile"><i class="bi bi-chat-square-text"></i></div><h3>Clear communication</h3><p>Share updates and explanations with team members to support consistent processes.</p></div></div>
+          <div class="col-sm-6 col-lg-3 reveal"><div class="surface-card expertise-card"><div class="icon-tile"><i class="bi bi-search"></i></div><h3>Analytical thinking</h3><p>Look for root causes, understand patterns, and contribute to preventive improvements.</p></div></div>
+          <div class="col-sm-6 col-lg-3 reveal"><div class="surface-card expertise-card"><div class="icon-tile"><i class="bi bi-graph-up-arrow"></i></div><h3>Continuous learning</h3><p>Engage in knowledge-sharing sessions and pursue ongoing professional development.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section pt-0" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="row align-items-center g-5 position-relative" style="z-index:1">
+            <div class="col-lg-6">
+              <p class="section-kicker">Let’s connect</p>
+              <h2 class="section-title">Looking for a reliable, quality-focused coding professional?</h2>
+              <p class="section-lead mb-0">I welcome opportunities to contribute my radiology coding knowledge, audit experience, and team coordination skills to a growing organization.</p>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+              <a class="contact-link" href="mailto:ammu62426@gmail.com"><i class="bi bi-envelope"></i><span><small>Email</small>ammu62426@gmail.com</span></a>
+              <a class="contact-link" href="tel:+917094804371"><i class="bi bi-telephone"></i><span><small>Phone</small>+91 70948 04371</span></a>
+              <div class="contact-link"><i class="bi bi-geo-alt"></i><span><small>Location</small>Manimangalam, Kanchipuram District, Tamil Nadu</span></div>
+              <div class="contact-link"><i class="bi bi-translate"></i><span><small>Languages</small>Tamil and English</span></div>
+              <a class="btn btn-light mt-4 fw-bold" href="mailto:ammu62426@gmail.com?subject=Professional%20Opportunity%20-%20Mahadevi%20S">Email me <i class="bi bi-arrow-up-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span>© <span id="currentYear"></span> Mahadevi S. All rights reserved.</span>
+      <span>Built with care · CPC Certified Medical Coding Professional</span>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- jQuery and Bootstrap 5 bundle -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(function () {
+      // Dynamic footer year
+      $('#currentYear').text(new Date().getFullYear());
+
+      // Navbar shadow and back-to-top visibility
+      function handleScroll() {
+        const y = $(window).scrollTop();
+        $('#mainNav').toggleClass('scrolled', y > 20);
+        $('#backTop').stop(true, true)[y > 500 ? 'fadeIn' : 'fadeOut'](160);
+      }
+      $(window).on('scroll', handleScroll);
+      handleScroll();
+
+      // Smooth scroll and close mobile navigation after selection
+      $('a[href^="#"]').on('click', function (e) {
+        const target = $(this.getAttribute('href'));
+        if (target.length) {
+          e.preventDefault();
+          $('html, body').animate({ scrollTop: target.offset().top - 74 }, 450);
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+
+      $('#backTop').on('click', function () {
+        $('html, body').animate({ scrollTop: 0 }, 450);
+      });
+
+      // Reveal sections as they enter the viewport
+      const revealObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            entry.target.querySelectorAll('.skill-bar span').forEach(function (bar) {
+              bar.classList.add('animated');
+            });
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(function (el) {
+        revealObserver.observe(el);
+      });
+
+      // Highlight the navigation item for the section in view
+      const sections = document.querySelectorAll('main section[id]');
+      const navLinks = document.querySelectorAll('.navbar .nav-link[href^="#"]');
+      const activeObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+      sections.forEach(function (section) { activeObserver.observe(section); });
+    });
+  </script>
+</body>
+</html>
